@@ -36,6 +36,6 @@ void UPistolVariables::SetVariables(int burstAmounti, float burstDelayf, float b
 {
 	burstAmount = burstAmounti;
 	burstDelay = burstDelayf;
-	burstDelayMod = burstDelayf;
+	burstDelayMod = burstDelayModf;
 }
 
