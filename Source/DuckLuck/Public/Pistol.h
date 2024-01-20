@@ -13,7 +13,7 @@ UCLASS()
 class DUCKLUCK_API APistol : public AWeapon
 {
 	GENERATED_BODY()
+
+public:
 	
-	UFUNCTION(BlueprintCallable)
-	void OverrideParentVariables() override;
 };

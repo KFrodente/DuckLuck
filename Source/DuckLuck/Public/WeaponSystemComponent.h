@@ -24,11 +24,11 @@ public: // ***** VARIABLES *****
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	APistol* m_Pistol;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AWeapon* m_MainWeapon;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//AWeapon* m_MainWeapon;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AWeapon* m_SecondaryWeapon;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	//AWeapon* m_SecondaryWeapon;
 
 private:
 

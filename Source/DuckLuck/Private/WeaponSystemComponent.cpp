@@ -38,7 +38,7 @@ void UWeaponSystemComponent::SetWeapons(APistol* pistol)
 {
 	m_Pistol = pistol;
 	///***THIS WONT BE HERE LATER MAKE SURE TO CHANGE THE LINE BELOW***
-	m_MainWeapon = m_Pistol;
+	//m_MainWeapon = m_Pistol;
 }
 
 void UWeaponSystemComponent::PistolCollected()
@@ -49,12 +49,12 @@ void UWeaponSystemComponent::PistolCollected()
 
 void UWeaponSystemComponent::SetActiveWeapon(int main, int secondary)
 {
-	if (main == m_Pistol->m_WeaponNumber) { 
-		//m_Pistol->active = true; 
-		m_MainWeapon = m_Pistol; 
-	}
-	if (secondary == m_Pistol->m_WeaponNumber) {
-		//m_Pistol->active = true;
-		m_SecondaryWeapon = m_Pistol;
-	}
+	//if (main == m_Pistol->m_WeaponNumber) { 
+	//	//m_Pistol->active = true; 
+	//	//m_MainWeapon = m_Pistol; 
+	//}
+	//if (secondary == m_Pistol->m_WeaponNumber) {
+	//	//m_Pistol->active = true;
+	//	//m_SecondaryWeapon = m_Pistol;
+	//}
 }

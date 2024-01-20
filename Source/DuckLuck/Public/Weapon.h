@@ -23,6 +23,13 @@ public: ///GLOBAL WEAPON VARIABLES
 	bool active;
 
 public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float fireRate;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float bulletVelocity;
+
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FVector m_RFirePoint{ 0, 0, 0 };
 	

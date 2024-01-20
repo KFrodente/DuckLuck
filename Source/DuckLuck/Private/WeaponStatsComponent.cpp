@@ -31,14 +31,14 @@ void UWeaponStatsComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 
 
 
-void UWeaponStatsComponent::ReCheckWeaponStats(int weaponNumberMain, int weaponNumberSub)
+void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const int weaponNumberSub)
 {
 	ResetAllWeaponStats();
 	if (weaponNumberMain == 1)
 	{
 		firerate = g_Firerate[pistFireRateLevel];
 		bulletVelocity = g_BulletVelocity[pistBulletVelocityLevel];
-		bulletVelocityMod = p_BulletVelocityMod[bulletVelocityModLevel];
+		burstAmount = p_BurstAmount[burstAmountLevel];
 		burstDelay = p_BurstDelay[burstDelayLevel];
 		burstDelayMod = p_BurstDelayMod[burstDelayModLevel];
 	}
@@ -71,6 +71,10 @@ bool UWeaponStatsComponent::WillBulletCauseElementDamage()
 
 	//return check <= totalElementChance;
 	return false;
+}
+
+void UWeaponStatsComponent::BeginSetStats()
+{
 }
 
 void UWeaponStatsComponent::ResetAllWeaponStats()

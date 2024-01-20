@@ -3,7 +3,3 @@
 
 #include "Pistol.h"
 
-void APistol::OverrideParentVariables()
-{
-	m_WeaponNumber = 1;
-}

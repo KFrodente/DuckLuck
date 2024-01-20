@@ -58,8 +58,8 @@ public: ///PISTOL ONLY STATS
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool p_Owned;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletVelocityModLevel = 1;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int burstAmountLevel = 1;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int burstDelayLevel = 1;
@@ -68,7 +68,7 @@ public: ///PISTOL ONLY STATS
 	int burstDelayModLevel = 1;
 
 private: // Stat levels
-	float p_BulletVelocityMod[6] = { 0, 1, .75f, .6f, .5f, .25f }; //percentage
+	int p_BurstAmount[6] = { 0, 1, 2, 3, 4, 5 };
 	float p_BurstDelay[6] = { 0, .5f, .4f, .3f, .2f, .1f };
 	float p_BurstDelayMod[6] = { 0, 1, .75f, .6f, .5f, .25f }; //percentage
 #pragma endregion 
@@ -168,7 +168,7 @@ public: //Weapon stats
 
 	//Pistol
 	UPROPERTY(BlueprintReadOnly)
-	float bulletVelocityMod;
+	int burstAmount;
 	UPROPERTY(BlueprintReadOnly)
 	float burstDelay;
 	UPROPERTY(BlueprintReadOnly)
