@@ -73,22 +73,6 @@ bool UWeaponStatsComponent::WillBulletCauseElementDamage()
 	return false;
 }
 
-void UWeaponStatsComponent::BeginSetStats()
-{
-	pistFireRateLevel = 1;
-	pistBulletVelocityLevel = 1;
-
-	bulletVelocityModLevel = 1;
-	burstDelayLevel = 1;
-	burstDelayModLevel = 1;
-
-	shotgunFireRateLevel = 1;
-	shotgunBulletVelocityLevel = 1;
-
-	chargeFireRateLevel = 1;
-	chargeBulletVelocityLevel = 1;
-}
-
 void UWeaponStatsComponent::ResetAllWeaponStats()
 {
 	firerate = 0;

@@ -33,48 +33,58 @@ public:
 #pragma region Global Weapon Stats
 public: ///GLOBAL GUN STATS
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistFireRateLevel = 1;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistBulletVelocityLevel = 1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int shotgunFireRateLevel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int shotgunBulletVelocityLevel;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int chargeFireRateLevel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int chargeBulletVelocityLevel;
 
 private: //Stat levels
 	float g_Firerate[6] = { 0, 3, 1, .8f, .5f, .1f };
-	float g_BulletVelocity[6] = { 0, 5, 10, 15, 25, 40 };
+	float g_BulletVelocity[6] = { 0, 500, 750, 1000, 1250, 1500 };
 #pragma endregion
 
 #pragma region Pistol Weapon Stats
 public: ///PISTOL ONLY STATS
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool p_Owned;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int bulletVelocityModLevel = 1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int burstDelayLevel = 1;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int burstDelayModLevel = 1;
 
 private: // Stat levels
 	float p_BulletVelocityMod[6] = { 0, 1, .75f, .6f, .5f, .25f }; //percentage
-	float p_BurstDelay[6] = { 0, 1, .8f, .6f, .4f, .2f };
+	float p_BurstDelay[6] = { 0, .5f, .4f, .3f, .2f, .1f };
 	float p_BurstDelayMod[6] = { 0, 1, .75f, .6f, .5f, .25f }; //percentage
 #pragma endregion 
 
 #pragma region Shotgun Weapon Stats
 public: ///SHOTGUN ONLY STATS
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool s_Owned;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int bulletLifespanLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int bulletsPerSpreadLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int spreadAngleLevel;
 
 private:
@@ -85,24 +95,24 @@ private:
 	 
 #pragma region Charge Weapon Stats
 public: ///CHARGE ONLY STATS
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool c_Owned;
 	bool c_EquippedMain;
 	bool c_EquippedDub;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int maxChargesLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int chargeTimeLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int chargeTimeModLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int bulletSizeizeperChargeLevel;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int velocityModPerChargeLevel;
 #pragma endregion
 
@@ -139,52 +149,52 @@ private:
 public:
 	std::random_device random;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int recentMainWeapon;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int recentSubWeapon;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int recentMainBullet;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int recentSubBullet;
 
 public: //Weapon stats
 	//Global
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float firerate;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float bulletVelocity;
 
 	//Pistol
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float bulletVelocityMod;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float burstDelay;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float burstDelayMod;
 
 	//Shotgun
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float bulletLifespan;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	float bulletsPerSpread;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
+	int bulletsPerSpread;
+	UPROPERTY(BlueprintReadOnly)
 	float spreadAngle;
 
 	//Charge
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float chargeTime;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float chargeTimeMod;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float bulletSizePerCharge;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float velocityModPerCharge;
 public: //Bullet stats
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float damage;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int elementChance;
 
 
