@@ -28,6 +28,20 @@ void UWeaponStatsComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
+void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP)
+{
+	burstAmountP = p_BurstAmount[burstAmountLevel];
+	burstDelayP = p_BurstDelay[burstDelayLevel];
+	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
+}
+
+void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS)
+{
+	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
+	bulletsPerSpreadS = s_BulletsPerSpread[bulletsPerSpreadLevel];
+	spreadAngleS = s_SpreadAngle[spreadAngleLevel];
+}
+
 
 
 
@@ -38,9 +52,6 @@ void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const
 	{
 		firerate = g_Firerate[pistFireRateLevel];
 		bulletVelocity = g_BulletVelocity[pistBulletVelocityLevel];
-		burstAmount = p_BurstAmount[burstAmountLevel];
-		burstDelay = p_BurstDelay[burstDelayLevel];
-		burstDelayMod = p_BurstDelayMod[burstDelayModLevel];
 	}
 
 	recentMainWeapon = weaponNumberMain;

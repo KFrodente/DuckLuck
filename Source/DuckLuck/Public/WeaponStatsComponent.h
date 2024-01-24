@@ -67,6 +67,9 @@ public: ///PISTOL ONLY STATS
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int burstDelayModLevel = 1;
 
+	UFUNCTION(BlueprintCallable)
+	void SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP);
+
 private: // Stat levels
 	int p_BurstAmount[6] = { 0, 1, 2, 3, 4, 5 };
 	float p_BurstDelay[6] = { 0, .5f, .4f, .3f, .2f, .1f };
@@ -86,6 +89,9 @@ public: ///SHOTGUN ONLY STATS
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int spreadAngleLevel;
+
+	UFUNCTION(BlueprintCallable)
+	void SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS);
 
 private:
 	float s_BulletLifespan[6] = { 0, 1, 2, 3, 3.5f, 5 };
@@ -166,31 +172,31 @@ public: //Weapon stats
 	UPROPERTY(BlueprintReadOnly)
 	float bulletVelocity;
 
-	//Pistol
-	UPROPERTY(BlueprintReadOnly)
-	int burstAmount;
-	UPROPERTY(BlueprintReadOnly)
-	float burstDelay;
-	UPROPERTY(BlueprintReadOnly)
-	float burstDelayMod;
+	////Pistol
+	//UPROPERTY(BlueprintReadOnly)
+	//int burstAmount;
+	//UPROPERTY(BlueprintReadOnly)
+	//float burstDelay;
+	//UPROPERTY(BlueprintReadOnly)
+	//float burstDelayMod;
 
-	//Shotgun
-	UPROPERTY(BlueprintReadOnly)
-	float bulletLifespan;
-	UPROPERTY(BlueprintReadOnly)
-	int bulletsPerSpread;
-	UPROPERTY(BlueprintReadOnly)
-	float spreadAngle;
+	////Shotgun
+	//UPROPERTY(BlueprintReadOnly)
+	//float bulletLifespan;
+	//UPROPERTY(BlueprintReadOnly)
+	//int bulletsPerSpread;
+	//UPROPERTY(BlueprintReadOnly)
+	//float spreadAngle;
 
-	//Charge
-	UPROPERTY(BlueprintReadOnly)
-	float chargeTime;
-	UPROPERTY(BlueprintReadOnly)
-	float chargeTimeMod;
-	UPROPERTY(BlueprintReadOnly)
-	float bulletSizePerCharge;
-	UPROPERTY(BlueprintReadOnly)
-	float velocityModPerCharge;
+	////Charge
+	//UPROPERTY(BlueprintReadOnly)
+	//float chargeTime;
+	//UPROPERTY(BlueprintReadOnly)
+	//float chargeTimeMod;
+	//UPROPERTY(BlueprintReadOnly)
+	//float bulletSizePerCharge;
+	//UPROPERTY(BlueprintReadOnly)
+	//float velocityModPerCharge;
 public: //Bullet stats
 	UPROPERTY(BlueprintReadOnly)
 	float damage;
