@@ -53,6 +53,11 @@ void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const
 		firerate = g_Firerate[pistFireRateLevel];
 		bulletVelocity = g_BulletVelocity[pistBulletVelocityLevel];
 	}
+	if (weaponNumberMain == 2)
+	{
+		firerate = g_Firerate[shotgunFireRateLevel];
+		bulletVelocity = g_BulletVelocity[shotgunBulletVelocityLevel];
+	}
 
 	recentMainWeapon = weaponNumberMain;
 	recentSubWeapon = weaponNumberSub;
