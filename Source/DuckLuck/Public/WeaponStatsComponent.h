@@ -172,31 +172,6 @@ public: //Weapon stats
 	UPROPERTY(BlueprintReadOnly)
 	float bulletVelocity;
 
-	////Pistol
-	//UPROPERTY(BlueprintReadOnly)
-	//int burstAmount;
-	//UPROPERTY(BlueprintReadOnly)
-	//float burstDelay;
-	//UPROPERTY(BlueprintReadOnly)
-	//float burstDelayMod;
-
-	////Shotgun
-	//UPROPERTY(BlueprintReadOnly)
-	//float bulletLifespan;
-	//UPROPERTY(BlueprintReadOnly)
-	//int bulletsPerSpread;
-	//UPROPERTY(BlueprintReadOnly)
-	//float spreadAngle;
-
-	////Charge
-	//UPROPERTY(BlueprintReadOnly)
-	//float chargeTime;
-	//UPROPERTY(BlueprintReadOnly)
-	//float chargeTimeMod;
-	//UPROPERTY(BlueprintReadOnly)
-	//float bulletSizePerCharge;
-	//UPROPERTY(BlueprintReadOnly)
-	//float velocityModPerCharge;
 public: //Bullet stats
 	UPROPERTY(BlueprintReadOnly)
 	float damage;

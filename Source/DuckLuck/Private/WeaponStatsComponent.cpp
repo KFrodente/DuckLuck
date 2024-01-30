@@ -35,6 +35,8 @@ void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP
 	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
 }
 
+
+
 void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS)
 {
 	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
