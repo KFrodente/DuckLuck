@@ -44,17 +44,11 @@ void UWeaponSystemComponent::SetWeapons(APistol* pistol)
 void UWeaponSystemComponent::PistolCollected()
 {
 	m_Pistol->owned = true;
-	SetActiveWeapon(m_Pistol->m_WeaponNumber);
+	SetActiveWeapon(m_Pistol->m_WeaponNumber, 0);
 }
 
 void UWeaponSystemComponent::SetActiveWeapon(int main, int secondary)
 {
-	//if (main == m_Pistol->m_WeaponNumber) { 
-	//	//m_Pistol->active = true; 
-	//	//m_MainWeapon = m_Pistol; 
-	//}
-	//if (secondary == m_Pistol->m_WeaponNumber) {
-	//	//m_Pistol->active = true;
-	//	//m_SecondaryWeapon = m_Pistol;
-	//}
+	mainWeaponNum = main;
+	subWeaponNum = secondary;
 }

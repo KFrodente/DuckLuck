@@ -24,11 +24,11 @@ public: // ***** VARIABLES *****
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	APistol* m_Pistol;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//AWeapon* m_MainWeapon;
+	UPROPERTY(BlueprintReadOnly)
+	int mainWeaponNum;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	//AWeapon* m_SecondaryWeapon;
+	UPROPERTY(BlueprintReadOnly)
+	int subWeaponNum;
 
 private:
 
@@ -49,6 +49,6 @@ public: // ***** METHODS AND FUNCTIONS *****
 	void PistolCollected();
 
 	UFUNCTION(BlueprintCallable)
-	void SetActiveWeapon(int main = 0, int secondary = 0);
+	void SetActiveWeapon(int main, int secondary);
 		
 };

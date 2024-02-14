@@ -34,19 +34,19 @@ public:
 public: ///GLOBAL GUN STATS
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int pistFireRateLevel = 1;
+	int pistFireRateLevel = 3;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int pistBulletVelocityLevel = 1;
+	int pistBulletVelocityLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int shotgunFireRateLevel;
+	int shotgunFireRateLevel = 3;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int shotgunBulletVelocityLevel;
+	int shotgunBulletVelocityLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int chargeFireRateLevel;
+	int chargeFireRateLevel = 3;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int chargeBulletVelocityLevel;
+	int chargeBulletVelocityLevel = 3;
 
 private: //Stat levels
 	float g_Firerate[6] = { 0, 3, 1, .8f, .5f, .1f };
@@ -59,13 +59,13 @@ public: ///PISTOL ONLY STATS
 	bool p_Owned;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int burstAmountLevel = 1;
+	int burstAmountLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int burstDelayLevel = 1;
+	int burstDelayLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int burstDelayModLevel = 1;
+	int burstDelayModLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
 	void SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP);
@@ -82,13 +82,13 @@ public: ///SHOTGUN ONLY STATS
 	bool s_Owned;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletLifespanLevel;
+	int bulletLifespanLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletsPerSpreadLevel;
+	int bulletsPerSpreadLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int spreadAngleLevel;
+	int spreadAngleLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
 	void SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS);
@@ -103,23 +103,21 @@ private:
 public: ///CHARGE ONLY STATS
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool c_Owned;
-	bool c_EquippedMain;
-	bool c_EquippedDub;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int maxChargesLevel;
+	int maxChargesLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int chargeTimeLevel;
+	int chargeTimeLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int chargeTimeModLevel;
+	int chargeTimeModLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletSizeizeperChargeLevel;
+	int bulletSizeizeperChargeLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int velocityModPerChargeLevel;
+	int velocityModPerChargeLevel = 3;
 #pragma endregion
 
 #pragma region My Methods and Functions
