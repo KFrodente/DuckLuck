@@ -14,4 +14,10 @@ class DUCKLUCK_API AWeaponCombo : public AWeapon
 {
 	GENERATED_BODY()
 	
+public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int mainWeaponNum;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int subWeaponNum;
 };
