@@ -34,17 +34,10 @@ void UWeaponSystemComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 	// ...
 }
 
-void UWeaponSystemComponent::SetWeapons(APistol* pistol)
-{
-	m_Pistol = pistol;
-	///***THIS WONT BE HERE LATER MAKE SURE TO CHANGE THE LINE BELOW***
-	//m_MainWeapon = m_Pistol;
-}
-
 void UWeaponSystemComponent::PistolCollected()
 {
-	m_Pistol->owned = true;
-	SetActiveWeapon(m_Pistol->m_WeaponNumber, 0);
+	m_Pistol.GetDefaultObject()->owned = true;
+	SetActiveWeapon(m_Pistol.GetDefaultObject()->m_WeaponNumber, 0);
 }
 
 void UWeaponSystemComponent::SetActiveWeapon(int main, int secondary)

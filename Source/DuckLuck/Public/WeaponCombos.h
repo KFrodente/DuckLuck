@@ -17,8 +17,11 @@ public:
 	// Sets default values for this component's properties
 	UWeaponCombos();
 
+	/*UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<AWeaponCombo*> Combos;*/
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<AWeaponCombo*> Combos;
+	TArray<TSubclassOf<AWeaponCombo>> Combos;
 
 protected:
 	// Called when the game starts
@@ -31,5 +34,5 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
-	AWeaponCombo* CheckForCombo(const int MainWeaponNum, const int SubWeaponNum);
+	TSubclassOf<AWeaponCombo> CheckForCombo(const int MainWeaponNum, const int SubWeaponNum);
 };
