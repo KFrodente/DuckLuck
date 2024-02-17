@@ -34,12 +34,11 @@ void UWeaponCombos::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 
 int UWeaponCombos::CheckForCombo(const int MainWeaponNum, const int SubWeaponNum)
 {
-	//for (TSubclassOf<AWeaponCombo> combo : Combos)
 	if (MainWeaponNum == 1) //if main weapon is a pistol it does this for loop
 	{
 		for (int i = 0; i < pistolCombos.Num(); i++)
 		{
-			if (pistolCombos[i].GetDefaultObject()->subWeaponNum == SubWeaponNum)
+			if (pistolCombos[i]->subWeaponNum == SubWeaponNum)
 				return i;
 		}
 	}
@@ -48,7 +47,7 @@ int UWeaponCombos::CheckForCombo(const int MainWeaponNum, const int SubWeaponNum
 	{
 		for (int i = 0; i < shotgunCombos.Num(); i++)
 		{
-			if (shotgunCombos[i].GetDefaultObject()->subWeaponNum == SubWeaponNum)
+			if (shotgunCombos[i]->subWeaponNum == SubWeaponNum)
 				return i;
 		}
 	}

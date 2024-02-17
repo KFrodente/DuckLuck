@@ -21,10 +21,10 @@ public:
 	TArray<AWeaponCombo*> Combos;*/
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<TSubclassOf<AWeaponCombo>> pistolCombos;
+	TArray<AWeaponCombo*> pistolCombos;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<TSubclassOf<AWeaponCombo>> shotgunCombos;
+	TArray<AWeaponCombo*> shotgunCombos;
 
 protected:
 	// Called when the game starts
