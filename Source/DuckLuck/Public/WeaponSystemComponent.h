@@ -21,13 +21,8 @@ public:
 
 public: // ***** VARIABLES *****
 
-	/*UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	APistol* m_Pistol;*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<AWeapon> m_Pistol;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	TSubclassOf<AWeapon> m_Shotgun;
+	APistol* m_Pistol;
 
 	UPROPERTY(BlueprintReadOnly)
 	int mainWeaponNum;
