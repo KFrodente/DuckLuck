@@ -7,7 +7,7 @@
 #include "ShotgunVariables.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType)
 class DUCKLUCK_API UShotgunVariables : public UActorComponent
 {
 	GENERATED_BODY()
@@ -25,7 +25,7 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable)
-	void SetVariables(float bulletLifespanF, int bulletsPerSpreadI, float spreadAngleF);
+	void SetVariables(float bulletLifespanF, int bulletsPerSpreadI, float spreadAngleF, int subBulletsPerSpreadI, float subSpreadAngleF);
 
 public:
 	UPROPERTY(BlueprintReadOnly)
@@ -34,5 +34,11 @@ public:
 	int bulletsPerSpread;
 	UPROPERTY(BlueprintReadOnly)
 	float spreadAngle;
+
+
+	UPROPERTY(BlueprintReadOnly)
+	int subBulletsPerSpread;
+	UPROPERTY(BlueprintReadOnly)
+	float subSpreadAngle;
 
 };

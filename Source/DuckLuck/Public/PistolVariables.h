@@ -7,7 +7,7 @@
 #include "PistolVariables.generated.h"
 
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType)
 class DUCKLUCK_API UPistolVariables : public UActorComponent
 {
 	GENERATED_BODY()
@@ -26,16 +26,18 @@ public:
 
 public:
 	UFUNCTION(BlueprintCallable)
-	void SetVariables(int burstAmounti, float burstDelayf, float burstDelayModf);
+	void SetVariables(int burstAmounti, float burstDelayf, float burstDelayModf, int subBurstAmounti);
 
 public:
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	int burstAmount;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float burstDelay;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintReadOnly)
 	float burstDelayMod;
-		
+
+	UPROPERTY(BlueprintReadOnly)
+	int subBurstAmount;
 };

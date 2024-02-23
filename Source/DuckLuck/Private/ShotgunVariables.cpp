@@ -32,11 +32,12 @@ void UShotgunVariables::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 	// ...
 }
 
-void UShotgunVariables::SetVariables(float bulletLifespanF, int bulletsPerSpreadI, float spreadAngleF)
+void UShotgunVariables::SetVariables(float bulletLifespanF, int bulletsPerSpreadI, float spreadAngleF, int subBulletsPerSpreadI, float subSpreadAngleF)
 {
 	bulletLifespan = bulletLifespanF;
 	bulletsPerSpread = bulletsPerSpreadI;
 	spreadAngle = spreadAngleF;
-
+	subBulletsPerSpread = subBulletsPerSpreadI;
+	subSpreadAngle = subSpreadAngleF;
 }
 

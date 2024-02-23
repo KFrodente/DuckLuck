@@ -28,20 +28,23 @@ void UWeaponStatsComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
-void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP)
+void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
 {
 	burstAmountP = p_BurstAmount[burstAmountLevel];
 	burstDelayP = p_BurstDelay[burstDelayLevel];
 	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
+	subBurstAmountP = p_SubBurstAmount[burstAmountLevel];
 }
 
 
 
-void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS)
+void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS)
 {
 	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
 	bulletsPerSpreadS = s_BulletsPerSpread[bulletsPerSpreadLevel];
 	spreadAngleS = s_SpreadAngle[spreadAngleLevel];
+	subBulletsPerSpreadS = s_SubBulletsPerSpread[bulletsPerSpreadLevel];
+	subSpreadAngleS = s_SubSpreadAngle[spreadAngleLevel];
 }
 
 

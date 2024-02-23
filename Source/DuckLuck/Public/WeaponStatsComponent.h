@@ -68,12 +68,15 @@ public: ///PISTOL ONLY STATS
 	int burstDelayModLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
-	void SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP);
+	void SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP);
 
 private: // Stat levels
 	int p_BurstAmount[6] = { 0, 1, 2, 3, 4, 5 };
 	float p_BurstDelay[6] = { 0, .5f, .4f, .3f, .2f, .1f };
 	float p_BurstDelayMod[6] = { 0, 1, .75f, .6f, .5f, .25f }; //percentage
+
+	int p_SubBurstAmount[6] = { 0, 1, 2, 2, 3, 4 };
+
 #pragma endregion 
 
 #pragma region Shotgun Weapon Stats
@@ -91,12 +94,15 @@ public: ///SHOTGUN ONLY STATS
 	int spreadAngleLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
-	void SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS);
+	void SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS);
 
 private:
 	float s_BulletLifespan[6] = { 0, 1, 2, 3, 3.5f, 5 };
 	int s_BulletsPerSpread[6] = { 0, 3, 4, 5, 6, 7 };
 	float s_SpreadAngle[6] = { 0, 60, 50, 40, 30, 20 };
+
+	int s_SubBulletsPerSpread[6] = { 0, 2, 2, 3, 4, 5 };
+	float s_SubSpreadAngle[6] = { 0, 60, 50, 40, 30, 20 };
 #pragma endregion
 	 
 #pragma region Charge Weapon Stats
