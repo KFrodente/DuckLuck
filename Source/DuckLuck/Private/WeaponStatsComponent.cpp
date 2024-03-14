@@ -50,6 +50,15 @@ void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bullets
 
 
 
+void UWeaponStatsComponent::SetChargeStats(int& maxChargesC, float& chargeTimeC, float& chargeTimeModC, float& damagePerChargeC, float& velocityModC)
+{
+	maxChargesC = c_MaxCharges[maxChargesLevel];
+	chargeTimeC = c_ChargeTime[chargeTimeLevel];
+	chargeTimeModC = c_ChargeTimeMod[chargeTimeModLevel];
+	damagePerChargeC = c_DamagePerCharge[damagePerChargeLevel];
+	velocityModC = c_VelocityModPerCharge[velocityModPerChargeLevel];
+}
+
 void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const int weaponNumberSub)
 {
 	ResetAllWeaponStats();
@@ -62,6 +71,11 @@ void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const
 	{
 		firerate = g_Firerate[shotgunFireRateLevel];
 		bulletVelocity = g_BulletVelocity[shotgunBulletVelocityLevel];
+	}
+	if (weaponNumberMain == 3)
+	{
+		firerate = g_Firerate[chargeFireRateLevel];
+		bulletVelocity = g_BulletVelocity[chargeBulletVelocityLevel];
 	}
 
 	recentMainWeapon = weaponNumberMain;

@@ -44,7 +44,7 @@ public: ///GLOBAL GUN STATS
 	int shotgunBulletVelocityLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int chargeFireRateLevel = 3;
+	int chargeFireRateLevel = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int chargeBulletVelocityLevel = 3;
 
@@ -120,10 +120,20 @@ public: ///CHARGE ONLY STATS
 	int chargeTimeModLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int bulletSizeizeperChargeLevel = 3;
+	int damagePerChargeLevel = 3;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int velocityModPerChargeLevel = 3;
+
+	UFUNCTION(BlueprintCallable)
+	void SetChargeStats(int& maxChargesC, float& chargeTimeC, float& chargeTimeModC, float& damagePerChargeC, float& velocityModC);
+
+private:
+	int c_MaxCharges[6] = { 0, 2, 3, 4, 5, 6 };
+	float c_ChargeTime[6] = { 0, 3, 2.5f, 2, 1.5f, 1 };
+	float c_ChargeTimeMod[6] = { 0, 1, .8f, .6f, .4f, .2f };
+	float c_DamagePerCharge[6] = { 0, .5f, .75f, 1, 1.5f, 2};
+	float c_VelocityModPerCharge[6] = { 0, 1.1f, 1.2f, 1.5f, 2, 4};
 #pragma endregion
 
 #pragma region My Methods and Functions
