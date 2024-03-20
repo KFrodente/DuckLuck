@@ -16,9 +16,6 @@ UWeaponStatsComponent::UWeaponStatsComponent()
 void UWeaponStatsComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-
-	
 }
 // Called every frame
 void UWeaponStatsComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -28,26 +25,46 @@ void UWeaponStatsComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	// ...
 }
 
-void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
+void UWeaponStatsComponent::SetStatComponents(UPistolVariables* pistol, UShotgunVariables* shotgun, UChargeVariables* charge)
 {
-	burstAmountP = p_BurstAmount[burstAmountLevel];
-	burstDelayP = p_BurstDelay[burstDelayLevel];
-	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
-	subBurstAmountP = p_SubBurstAmount[burstAmountLevel];
+	pistolVariables = pistol;
+	shotgunVariables = shotgun;
+	chargeVariables = charge;
 }
 
+//void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
+//{
+//	burstAmountP = p_BurstAmount[burstAmountLevel];
+//	burstDelayP = p_BurstDelay[burstDelayLevel];
+//	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
+//	subBurstAmountP = p_SubBurstAmount[burstAmountLevel];
+//}
 
+void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
+{
+	pistolVariables->burstAmount = p_BurstAmount[burstAmountLevel];
+	pistolVariables->burstDelay = p_BurstDelay[burstDelayLevel];
+	pistolVariables->burstDelayMod = p_BurstDelayMod[burstDelayModLevel];
+	pistolVariables->subBurstAmount = p_SubBurstAmount[burstAmountLevel];
+}
+//
+//void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS)
+//{
+//	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
+//	bulletsPerSpreadS = s_BulletsPerSpread[bulletsPerSpreadLevel];
+//	spreadAngleS = s_SpreadAngle[spreadAngleLevel];
+//	subBulletsPerSpreadS = s_SubBulletsPerSpread[bulletsPerSpreadLevel];
+//	subSpreadAngleS = s_SubSpreadAngle[spreadAngleLevel];
+//}
 
 void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS)
 {
-	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
-	bulletsPerSpreadS = s_BulletsPerSpread[bulletsPerSpreadLevel];
-	spreadAngleS = s_SpreadAngle[spreadAngleLevel];
-	subBulletsPerSpreadS = s_SubBulletsPerSpread[bulletsPerSpreadLevel];
-	subSpreadAngleS = s_SubSpreadAngle[spreadAngleLevel];
+	shotgunVariables->bulletLifespan = s_BulletLifespan[bulletLifespanLevel];
+	shotgunVariables->bulletsPerSpread = s_BulletsPerSpread[bulletsPerSpreadLevel];
+	shotgunVariables->spreadAngle = s_SpreadAngle[spreadAngleLevel];
+	shotgunVariables->subBulletsPerSpread = s_SubBulletsPerSpread[bulletsPerSpreadLevel];
+	shotgunVariables->subSpreadAngle = s_SubSpreadAngle[spreadAngleLevel];
 }
-
-
 
 
 void UWeaponStatsComponent::SetChargeStats(int& maxChargesC, float& chargeTimeC, float& chargeTimeModC, float& damagePerChargeC, float& velocityModC)

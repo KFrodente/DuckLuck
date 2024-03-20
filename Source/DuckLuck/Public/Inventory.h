@@ -3,26 +3,33 @@
 #pragma once
 
 #include "WeaponStatsComponent.h"
-#include "WeaponSystemComponent.h"
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Components/ActorComponent.h"
 #include "Inventory.generated.h"
 
-UCLASS()
-class DUCKLUCK_API AInventory : public AActor
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+class DUCKLUCK_API UInventory : public UActorComponent
 {
 	GENERATED_BODY()
-	
+
 public:	
-	// Sets default values for this actor's properties
-	AInventory();
+	// Sets default values for this component's properties
+	UInventory();
 
 protected:
-	// Called when the game starts or when spawned
+	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetVars(UWeaponStatsComponent* stats);
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UWeaponStatsComponent* weaponStats;
 };

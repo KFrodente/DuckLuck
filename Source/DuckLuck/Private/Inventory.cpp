@@ -3,25 +3,37 @@
 
 #include "Inventory.h"
 
-// Sets default values
-AInventory::AInventory()
+// Sets default values for this component's properties
+UInventory::UInventory()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
 
+	// ...
 }
 
-// Called when the game starts or when spawned
-void AInventory::BeginPlay()
+
+// Called when the game starts
+void UInventory::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// ...
 	
 }
 
-// Called every frame
-void AInventory::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
+// Called every frame
+void UInventory::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// ...
+}
+
+void UInventory::SetVars(UWeaponStatsComponent* stats)
+{
+	weaponStats = stats;
 }
 

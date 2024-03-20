@@ -3,6 +3,9 @@
 #pragma once
 
 #include <random>
+#include "ChargeVariables.h"
+#include "PistolVariables.h"
+#include "ShotgunVariables.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "WeaponStatsComponent.generated.h"
@@ -30,8 +33,23 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetStatComponents(UPistolVariables* pistol, UShotgunVariables* shotgun, UChargeVariables* charge);
+
 #pragma region Global Weapon Stats
 public: ///GLOBAL GUN STATS
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPistolVariables* pistolVariables;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UShotgunVariables* shotgunVariables;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UChargeVariables* chargeVariables;
+
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int pistFireRateLevel = 3;
