@@ -31,12 +31,3 @@ void UPistolVariables::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 	// ...
 }
-
-void UPistolVariables::SetVariables(int burstAmounti, float burstDelayf, float burstDelayModf, int subBurstAmounti)
-{
-	burstAmount = burstAmounti;
-	burstDelay = burstDelayf;
-	burstDelayMod = burstDelayModf;
-	subBurstAmount = subBurstAmounti;
-}
-

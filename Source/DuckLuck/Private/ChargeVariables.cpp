@@ -31,13 +31,3 @@ void UChargeVariables::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 	// ...
 }
-
-void UChargeVariables::SetVariables(int maxChargesi, float chargeTimef, float chargeTimeModf, float damagePerChargef, float velocityModf)
-{
-	maxCharges = maxChargesi;
-	chargeTime = chargeTimef;
-	chargeTimeMod = chargeTimeModf;
-	bulletDamagePerCharge = damagePerChargef;
-	velocityModPerCharge = velocityModf;
-}
-

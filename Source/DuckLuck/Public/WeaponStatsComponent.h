@@ -86,7 +86,7 @@ public: ///PISTOL ONLY STATS
 	int burstDelayModLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
-	void SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP);
+	void SetPistolStats();
 
 private: // Stat levels
 	int p_BurstAmount[6] = { 0, 1, 2, 3, 4, 5 };
@@ -112,7 +112,7 @@ public: ///SHOTGUN ONLY STATS
 	int spreadAngleLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
-	void SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS);
+	void SetShotgunStats();
 
 private:
 	float s_BulletLifespan[6] = { 0, 1, 2, 3, 3.5f, 5 };
@@ -144,7 +144,7 @@ public: ///CHARGE ONLY STATS
 	int velocityModPerChargeLevel = 3;
 
 	UFUNCTION(BlueprintCallable)
-	void SetChargeStats(int& maxChargesC, float& chargeTimeC, float& chargeTimeModC, float& damagePerChargeC, float& velocityModC);
+	void SetChargeStats();
 
 private:
 	int c_MaxCharges[6] = { 0, 2, 3, 4, 5, 6 };

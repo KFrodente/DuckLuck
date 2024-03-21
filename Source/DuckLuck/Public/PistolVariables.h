@@ -25,10 +25,6 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void SetVariables(int burstAmounti, float burstDelayf, float burstDelayModf, int subBurstAmounti);
-
-public:
 	UPROPERTY(BlueprintReadOnly)
 	int burstAmount;
 

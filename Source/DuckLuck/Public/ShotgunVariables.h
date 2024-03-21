@@ -24,9 +24,6 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	UFUNCTION(BlueprintCallable)
-	void SetVariables(float bulletLifespanF, int bulletsPerSpreadI, float spreadAngleF, int subBulletsPerSpreadI, float subSpreadAngleF);
-
 public:
 	UPROPERTY(BlueprintReadOnly)
 	float bulletLifespan;

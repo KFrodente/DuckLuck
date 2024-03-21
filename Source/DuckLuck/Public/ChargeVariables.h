@@ -25,8 +25,6 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 public:
-	UFUNCTION(BlueprintCallable)
-	void SetVariables(int maxChargesi, float chargeTimef, float chargeTimeModf, float damagePerChargef, float velocityModf);
 
 public:
 	UPROPERTY(BlueprintReadOnly)

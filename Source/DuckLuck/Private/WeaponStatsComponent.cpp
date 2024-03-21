@@ -32,32 +32,15 @@ void UWeaponStatsComponent::SetStatComponents(UPistolVariables* pistol, UShotgun
 	chargeVariables = charge;
 }
 
-//void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
-//{
-//	burstAmountP = p_BurstAmount[burstAmountLevel];
-//	burstDelayP = p_BurstDelay[burstDelayLevel];
-//	burstDelayModP = p_BurstDelayMod[burstDelayModLevel];
-//	subBurstAmountP = p_SubBurstAmount[burstAmountLevel];
-//}
-
-void UWeaponStatsComponent::SetPistolStats(int& burstAmountP, float& burstDelayP, float& burstDelayModP, int& subBurstAmountP)
+void UWeaponStatsComponent::SetPistolStats()
 {
 	pistolVariables->burstAmount = p_BurstAmount[burstAmountLevel];
 	pistolVariables->burstDelay = p_BurstDelay[burstDelayLevel];
 	pistolVariables->burstDelayMod = p_BurstDelayMod[burstDelayModLevel];
 	pistolVariables->subBurstAmount = p_SubBurstAmount[burstAmountLevel];
 }
-//
-//void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS)
-//{
-//	bulletLifespanS = s_BulletLifespan[bulletLifespanLevel];
-//	bulletsPerSpreadS = s_BulletsPerSpread[bulletsPerSpreadLevel];
-//	spreadAngleS = s_SpreadAngle[spreadAngleLevel];
-//	subBulletsPerSpreadS = s_SubBulletsPerSpread[bulletsPerSpreadLevel];
-//	subSpreadAngleS = s_SubSpreadAngle[spreadAngleLevel];
-//}
 
-void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bulletsPerSpreadS, float& spreadAngleS, int& subBulletsPerSpreadS, float& subSpreadAngleS)
+void UWeaponStatsComponent::SetShotgunStats()
 {
 	shotgunVariables->bulletLifespan = s_BulletLifespan[bulletLifespanLevel];
 	shotgunVariables->bulletsPerSpread = s_BulletsPerSpread[bulletsPerSpreadLevel];
@@ -67,13 +50,13 @@ void UWeaponStatsComponent::SetShotgunStats(float& bulletLifespanS, int& bullets
 }
 
 
-void UWeaponStatsComponent::SetChargeStats(int& maxChargesC, float& chargeTimeC, float& chargeTimeModC, float& damagePerChargeC, float& velocityModC)
+void UWeaponStatsComponent::SetChargeStats()
 {
-	maxChargesC = c_MaxCharges[maxChargesLevel];
-	chargeTimeC = c_ChargeTime[chargeTimeLevel];
-	chargeTimeModC = c_ChargeTimeMod[chargeTimeModLevel];
-	damagePerChargeC = c_DamagePerCharge[damagePerChargeLevel];
-	velocityModC = c_VelocityModPerCharge[velocityModPerChargeLevel];
+	chargeVariables->maxCharges = c_MaxCharges[maxChargesLevel];
+	chargeVariables->chargeTime = c_ChargeTime[chargeTimeLevel];
+	chargeVariables->chargeTimeMod = c_ChargeTimeMod[chargeTimeModLevel];
+	chargeVariables->bulletDamagePerCharge = c_DamagePerCharge[damagePerChargeLevel];
+	chargeVariables->velocityModPerCharge = c_VelocityModPerCharge[velocityModPerChargeLevel];
 }
 
 void UWeaponStatsComponent::ReCheckWeaponStats(const int weaponNumberMain, const int weaponNumberSub)
