@@ -91,23 +91,6 @@ void UWeaponStatsComponent::ReCheckAllStats(int weaponNumberMain, int weaponNumb
 {
 }
 
-bool UWeaponStatsComponent::WillBulletCauseElementDamage()
-{
-	//TODO: does a random check based on 
-	//the bullet's elemental damage chance.
-	// 
-	// * returns true if random chance happened, 
-	//		causing the bullet to do it's element
-	//
-	//EVERY BULLET WHEN SPAWNED WILL CALL THIS *ONE* TIME
-	//std::uniform_int_distribution<int> dist(1, 100);
-
-	//int check = dist(random);
-
-	//return check <= totalElementChance;
-	return false;
-}
-
 void UWeaponStatsComponent::BeginSetStats()
 {
 }

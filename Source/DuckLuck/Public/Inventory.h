@@ -3,6 +3,7 @@
 #pragma once
 
 #include "WeaponStatsComponent.h"
+#include "BulletStats.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Inventory.generated.h"
@@ -32,4 +33,7 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	UWeaponStatsComponent* weaponStats;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UBulletStats* bulletStats;
 };

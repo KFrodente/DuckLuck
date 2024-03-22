@@ -9,12 +9,6 @@
 /**
  * 
  */
-UENUM(BlueprintType)
-enum class eBulletType
-{
-	NORMAL UMETA(DisplayName = "Normal"),
-	BIG UMETA(DisplayName = "Big")
-};
 
 
 UCLASS()
@@ -24,13 +18,24 @@ class DUCKLUCK_API ABullet : public APaperSpriteActor
 	
 
 public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool m_owned;
 
-	UPROPERTY(BlueprintReadWrite)
-	int m_DamageLevel;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int m_BulletLevel = 1;
 
-	UPROPERTY(BlueprintReadWrite)
-	int m_ElementChanceLevel;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> l_Damage;
 
-	UPROPERTY(BlueprintReadWrite)
-	eBulletType m_Type;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<int> l_ElementChance;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> l_SubDamage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<int> l_SubElementChance;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int bulletNumber;
 };

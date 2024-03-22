@@ -2,34 +2,20 @@
 
 #pragma once
 
-#include "Pistol.h"
 #include "Bullet.h"
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "WeaponSystemComponent.generated.h"
+#include "BulletStats.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class DUCKLUCK_API UWeaponSystemComponent : public UActorComponent
+class DUCKLUCK_API UBulletStats : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UWeaponSystemComponent();
-
-public: // ***** VARIABLES *****
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	APistol* m_Pistol;
-
-	UPROPERTY(BlueprintReadOnly)
-	int mainWeaponNum;
-
-	UPROPERTY(BlueprintReadOnly)
-	int subWeaponNum;
-
-private:
+	UBulletStats();
 
 protected:
 	// Called when the game starts
@@ -39,13 +25,23 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-
-public: // ***** METHODS AND FUNCTIONS *****
-
+public: //FUNCTIONS
 	UFUNCTION(BlueprintCallable)
-	void PistolCollected();
-
-	UFUNCTION(BlueprintCallable)
-	void SetActiveWeapon(int main, int secondary);
+	void ReCheckBulletStats(const ABullet* mainBullet, const ABullet* subBullet);
 		
+	//Needs to do this every time a bullet is created
+	UFUNCTION(BlueprintCallable)
+	bool CheckForElement() const;
+
+
+public: //VARIABLES
+
+	UPROPERTY(BlueprintReadOnly)
+	bool nextBulletHasElement;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	float totalDamage;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int totalElementChance;
 };

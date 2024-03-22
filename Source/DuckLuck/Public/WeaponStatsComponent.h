@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include <random>
 #include "ChargeVariables.h"
 #include "PistolVariables.h"
 #include "ShotgunVariables.h"
@@ -167,9 +166,6 @@ public:
 	void ReCheckAllStats(int weaponNumberMain = 0, int weaponNumberSub = 0, int bulletNumberMain = 0, int bulletNumberSub = 0);
 
 	UFUNCTION(BlueprintCallable)
-	bool WillBulletCauseElementDamage();
-
-	UFUNCTION(BlueprintCallable)
 	void BeginSetStats();
 
 private:
@@ -185,7 +181,6 @@ private:
 #pragma endregion
 
 public:
-	std::random_device random;
 
 	UPROPERTY(BlueprintReadOnly)
 	int recentMainWeapon;
