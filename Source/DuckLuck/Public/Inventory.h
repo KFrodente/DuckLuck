@@ -35,5 +35,5 @@ public:
 	UWeaponStatsComponent* weaponStats;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	UBulletStats* bulletStats;
+	int ModifierSlots = 1;
 };

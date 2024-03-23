@@ -25,10 +25,16 @@ public:
 	int m_BulletLevel = 1;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool usesActivationTime = false;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> l_Damage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<int> l_ElementChance;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> l_ActivationTime;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> l_SubDamage;
