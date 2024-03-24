@@ -34,6 +34,7 @@ public: //FUNCTIONS
 	bool CheckForElement() const;
 
 
+
 public: //VARIABLES
 
 	UPROPERTY(BlueprintReadOnly)

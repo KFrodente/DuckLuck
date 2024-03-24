@@ -34,7 +34,7 @@ void UBulletStats::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 
 void UBulletStats::ReCheckBulletStats(const ABullet* mainBullet, const ABullet* subBullet = nullptr)
 {
-	int mainLevel = mainBullet->m_BulletLevel;
+	/*int mainLevel = mainBullet->m_BulletLevel;
 	
 	totalDamage = mainBullet->l_Damage[mainLevel];
 	totalElementChance = mainBullet->l_ElementChance[mainLevel];
@@ -44,7 +44,7 @@ void UBulletStats::ReCheckBulletStats(const ABullet* mainBullet, const ABullet* 
 		int subLevel = subBullet->m_BulletLevel;
 		totalDamage += subBullet->l_SubDamage[subLevel];
 		totalElementChance += subBullet->l_SubElementChance[subLevel];
-	}
+	}*/
 
 }
 
@@ -54,4 +54,5 @@ bool UBulletStats::CheckForElement() const
 
 	return random <= totalElementChance;
 }
+
 

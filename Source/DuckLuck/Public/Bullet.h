@@ -19,29 +19,15 @@ class DUCKLUCK_API ABullet : public APaperSpriteActor
 
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	bool m_owned;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int m_BulletLevel = 1;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	bool usesActivationTime = false;
+	float baseDamage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> l_Damage;
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<int> l_ElementChance;
+	float multiplier = 1;
+
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<float> l_ActivationTime;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<float> l_SubDamage;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	TArray<int> l_SubElementChance;
-
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int bulletNumber;
+	int modIndex;
 };
