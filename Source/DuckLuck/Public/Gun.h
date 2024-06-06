@@ -92,36 +92,36 @@ public:
 	TArray<float> S_VelocityModPerCharge;
 
 public:
-	UPROPERTY()
-	int L_CoatingSlot;
-	UPROPERTY()
-	int L_CasingSlot;
-	UPROPERTY()
-	int L_ModifierSlot;
-	UPROPERTY()
-	int L_FireRate;
-	UPROPERTY()
-	int L_BulletVelocity;
-	UPROPERTY()
-	int L_BurstAmount;
-	UPROPERTY()
-	int L_TimeBetweenBursts;
-	UPROPERTY()
-	int L_BulletsPerSpread;
-	UPROPERTY()
-	int L_SpreadAngle;
-	UPROPERTY()
-	int L_AdditionalBulletSize;
-	UPROPERTY()
-	int L_MaxCharges;
-	UPROPERTY()
-	int L_ChargeTime;
-	UPROPERTY()
-	int L_ChargeTimeMod;
-	UPROPERTY()
-	int L_DamagePerCharge;
-	UPROPERTY()
-	int L_VelocityModPerCharge;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_CoatingSlot = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_CasingSlot = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_ModifierSlot = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_FireRate = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_BulletVelocity = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_BurstAmount = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_TimeBetweenBursts = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_BulletsPerSpread = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_SpreadAngle = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_AdditionalBulletSize = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_MaxCharges = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_ChargeTime = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_ChargeTimeMod = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_DamagePerCharge = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_VelocityModPerCharge = 10;
 
 
 

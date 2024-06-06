@@ -66,20 +66,20 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 
 void AGun::setVariables()
 {
-	coatingSlotsAvailable  = S_CoatingSlotsAvailable[L_CoatingSlot];
-	casingSlotsAvailable = S_CasingSlotsAvailable[L_CasingSlot];
-	modifierSlotsAvailable = S_ModifierSlotsAvailable[L_ModifierSlot];
-	fireRate = S_FireRate[L_FireRate];
-	bulletVelocity = S_BulletVelocity[L_BulletVelocity];
-	burstAmount = S_BurstAmount[L_BurstAmount];
-	timeBetweenBursts = S_TimeBetweenBursts[L_TimeBetweenBursts];
-	bulletsPerSpread = S_BulletsPerSpread[L_BulletsPerSpread];
-	spreadAngle = S_SpreadAngle[L_SpreadAngle];
-	additionalBulletSize = S_AdditionalBulletSize[L_AdditionalBulletSize];
-	maxCharges = S_MaxCharges[L_MaxCharges];
-	chargeTime = S_ChargeTime[L_ChargeTime];
-	chargeTimeMod = S_ChargeTimeMod[L_ChargeTimeMod];
-	damagePerCharge = S_DamagePerCharge[L_DamagePerCharge];
-	velocityModPerCharge = S_VelocityModPerCharge[L_VelocityModPerCharge];
+	coatingSlotsAvailable  = S_CoatingSlotsAvailable[std::max(0, std::min(L_CoatingSlot, 19))];
+	casingSlotsAvailable = S_CasingSlotsAvailable[std::max(0, std::min(L_CasingSlot, 19))];
+	modifierSlotsAvailable = S_ModifierSlotsAvailable[std::max(0, std::min(L_ModifierSlot, 19))];
+	fireRate = S_FireRate[std::max(0, std::min(L_FireRate, 19))];
+	bulletVelocity = S_BulletVelocity[std::max(0, std::min(L_BulletVelocity, 19))];
+	burstAmount = S_BurstAmount[std::max(0, std::min(L_BurstAmount, 19))];
+	timeBetweenBursts = S_TimeBetweenBursts[std::max(0, std::min(L_TimeBetweenBursts, 19))];
+	bulletsPerSpread = S_BulletsPerSpread[std::max(0, std::min(L_BulletsPerSpread, 19))];
+	spreadAngle = S_SpreadAngle[std::max(0, std::min(L_SpreadAngle, 19))];
+	additionalBulletSize = S_AdditionalBulletSize[std::max(0, std::min(L_AdditionalBulletSize, 19))];
+	maxCharges = S_MaxCharges[std::max(0, std::min(L_MaxCharges, 19))];
+	chargeTime = S_ChargeTime[std::max(0, std::min(L_ChargeTime, 19))];
+	chargeTimeMod = S_ChargeTimeMod[std::max(0, std::min(L_ChargeTimeMod, 19))];
+	damagePerCharge = S_DamagePerCharge[std::max(0, std::min(L_DamagePerCharge, 19))];
+	velocityModPerCharge = S_VelocityModPerCharge[std::max(0, std::min(L_VelocityModPerCharge, 19))];
 }
 
