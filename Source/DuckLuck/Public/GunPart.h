@@ -32,6 +32,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int fireRateMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int bulletDamageMod = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int bulletVelocityMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int burstAmountMod = 0;

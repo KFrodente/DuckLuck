@@ -38,6 +38,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float fireRate;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float bulletDamage;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float bulletVelocity;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int burstAmount;
@@ -69,6 +71,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> S_FireRate;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> S_BulletDamage;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> S_BulletVelocity;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<int> S_BurstAmount;
@@ -93,35 +97,37 @@ public:
 
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_CoatingSlot = 10;
+	int L_CoatingSlot = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_CasingSlot = 10;
+	int L_CasingSlot = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ModifierSlot = 10;
+	int L_ModifierSlot = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_FireRate = 10;
+	int L_FireRate = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BulletVelocity = 10;
+	int L_BulletDamage = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BurstAmount = 10;
+	int L_BulletVelocity = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_TimeBetweenBursts = 10;
+	int L_BurstAmount = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BulletsPerSpread = 10;
+	int L_TimeBetweenBursts = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_SpreadAngle = 10;
+	int L_BulletsPerSpread = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_AdditionalBulletSize = 10;
+	int L_SpreadAngle = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_MaxCharges = 10;
+	int L_AdditionalBulletSize = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ChargeTime = 10;
+	int L_MaxCharges = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ChargeTimeMod = 10;
+	int L_ChargeTime = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_DamagePerCharge = 10;
+	int L_ChargeTimeMod = 11;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_VelocityModPerCharge = 10;
+	int L_DamagePerCharge = 11;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_VelocityModPerCharge = 11;
 
 
 
@@ -144,7 +150,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RemoveModifier(AGunPart* gunPart);
 
-	
+	UFUNCTION(BlueprintCallable)
 	void setVariables();
 
 };

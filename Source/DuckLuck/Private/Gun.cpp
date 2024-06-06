@@ -30,6 +30,7 @@ void AGun::AddModifier(AGunPart* gunPart)
 	L_CasingSlot += gunPart->casingSlotsChange;
 	L_ModifierSlot += gunPart->modifierSlotsChange;
 	L_FireRate += gunPart->fireRateMod;
+	L_BulletDamage += gunPart->bulletDamageMod;
 	L_BulletVelocity += gunPart->bulletVelocityMod;
 	L_BurstAmount += gunPart->burstAmountMod;
 	L_TimeBetweenBursts += gunPart->timeBetweenBurstsMod;
@@ -50,6 +51,7 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 	L_CasingSlot -= gunPart->casingSlotsChange;
 	L_ModifierSlot -= gunPart->modifierSlotsChange;
 	L_FireRate -= gunPart->fireRateMod;
+	L_BulletDamage -= gunPart->bulletDamageMod;
 	L_BulletVelocity -= gunPart->bulletVelocityMod;
 	L_BurstAmount -= gunPart->burstAmountMod;
 	L_TimeBetweenBursts -= gunPart->timeBetweenBurstsMod;
@@ -66,20 +68,21 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 
 void AGun::setVariables()
 {
-	coatingSlotsAvailable  = S_CoatingSlotsAvailable[std::max(0, std::min(L_CoatingSlot, 19))];
-	casingSlotsAvailable = S_CasingSlotsAvailable[std::max(0, std::min(L_CasingSlot, 19))];
-	modifierSlotsAvailable = S_ModifierSlotsAvailable[std::max(0, std::min(L_ModifierSlot, 19))];
-	fireRate = S_FireRate[std::max(0, std::min(L_FireRate, 19))];
-	bulletVelocity = S_BulletVelocity[std::max(0, std::min(L_BulletVelocity, 19))];
-	burstAmount = S_BurstAmount[std::max(0, std::min(L_BurstAmount, 19))];
-	timeBetweenBursts = S_TimeBetweenBursts[std::max(0, std::min(L_TimeBetweenBursts, 19))];
-	bulletsPerSpread = S_BulletsPerSpread[std::max(0, std::min(L_BulletsPerSpread, 19))];
-	spreadAngle = S_SpreadAngle[std::max(0, std::min(L_SpreadAngle, 19))];
-	additionalBulletSize = S_AdditionalBulletSize[std::max(0, std::min(L_AdditionalBulletSize, 19))];
-	maxCharges = S_MaxCharges[std::max(0, std::min(L_MaxCharges, 19))];
-	chargeTime = S_ChargeTime[std::max(0, std::min(L_ChargeTime, 19))];
-	chargeTimeMod = S_ChargeTimeMod[std::max(0, std::min(L_ChargeTimeMod, 19))];
-	damagePerCharge = S_DamagePerCharge[std::max(0, std::min(L_DamagePerCharge, 19))];
-	velocityModPerCharge = S_VelocityModPerCharge[std::max(0, std::min(L_VelocityModPerCharge, 19))];
+	coatingSlotsAvailable  = S_CoatingSlotsAvailable[std::max(0, std::min(L_CoatingSlot, 20))];
+	casingSlotsAvailable = S_CasingSlotsAvailable[std::max(0, std::min(L_CasingSlot, 20))];
+	modifierSlotsAvailable = S_ModifierSlotsAvailable[std::max(0, std::min(L_ModifierSlot, 20))];
+	fireRate = S_FireRate[std::max(0, std::min(L_FireRate, 20))];
+	bulletDamage = S_BulletDamage[std::max(0, std::min(L_BulletDamage, 20))];
+	bulletVelocity = S_BulletVelocity[std::max(0, std::min(L_BulletVelocity, 20))];
+	burstAmount = S_BurstAmount[std::max(0, std::min(L_BurstAmount, 20))];
+	timeBetweenBursts = S_TimeBetweenBursts[std::max(0, std::min(L_TimeBetweenBursts, 20))];
+	bulletsPerSpread = S_BulletsPerSpread[std::max(0, std::min(L_BulletsPerSpread, 20))];
+	spreadAngle = S_SpreadAngle[std::max(0, std::min(L_SpreadAngle, 20))];
+	additionalBulletSize = S_AdditionalBulletSize[std::max(0, std::min(L_AdditionalBulletSize, 20))];
+	maxCharges = S_MaxCharges[std::max(0, std::min(L_MaxCharges, 20))];
+	chargeTime = S_ChargeTime[std::max(0, std::min(L_ChargeTime, 20))];
+	chargeTimeMod = S_ChargeTimeMod[std::max(0, std::min(L_ChargeTimeMod, 20))];
+	damagePerCharge = S_DamagePerCharge[std::max(0, std::min(L_DamagePerCharge, 20))];
+	velocityModPerCharge = S_VelocityModPerCharge[std::max(0, std::min(L_VelocityModPerCharge, 20))];
 }
 
