@@ -13,5 +13,4 @@ UCLASS()
 class DUCKLUCK_API ADuckLuckGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
 };
