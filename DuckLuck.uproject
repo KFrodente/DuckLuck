@@ -51,6 +51,10 @@
 		{
 			"Name": "PCG",
 			"Enabled": true
+		},
+		{
+			"Name": "ColorCorrectRegions",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
