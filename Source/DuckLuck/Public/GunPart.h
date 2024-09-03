@@ -48,6 +48,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int maxChargesMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int chargeTime = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int chargeTimeMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int chargeTimeModMod = 0;

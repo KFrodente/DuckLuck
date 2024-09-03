@@ -38,8 +38,8 @@ void AGun::AddModifier(AGunPart* gunPart)
 	L_SpreadAngle += gunPart->spreadAngleMod;
 	L_AdditionalBulletSize += gunPart->additionalBulletSizeMod;
 	L_MaxCharges += gunPart->maxChargesMod;
-	L_ChargeTime += gunPart->chargeTimeMod;
-	L_ChargeTimeMod += gunPart->chargeTimeModMod;
+	L_ChargeTime += gunPart->chargeTime;
+	L_ChargeTimeMod += gunPart->chargeTimeMod;
 	L_DamagePerCharge += gunPart->damagePerChargeMod;
 	L_VelocityModPerCharge += gunPart->velocityModPerChargeMod;
 	setVariables();
@@ -59,8 +59,8 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 	L_SpreadAngle -= gunPart->spreadAngleMod;
 	L_AdditionalBulletSize -= gunPart->additionalBulletSizeMod;
 	L_MaxCharges -= gunPart->maxChargesMod;
-	L_ChargeTime -= gunPart->chargeTimeMod;
-	L_ChargeTimeMod -= gunPart->chargeTimeModMod;
+	L_ChargeTime -= gunPart->chargeTime;
+	L_ChargeTimeMod -= gunPart->chargeTimeMod;
 	L_DamagePerCharge -= gunPart->damagePerChargeMod;
 	L_VelocityModPerCharge -= gunPart->velocityModPerChargeMod;
 	setVariables();
