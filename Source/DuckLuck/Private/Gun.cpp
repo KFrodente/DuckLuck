@@ -21,6 +21,9 @@ void AGun::ResetVariables()
 	damagePerCharge = 0;
 	velocityModPerCharge = 0;
 	additionalBulletSize = 0;
+	searchSize = 0;
+	searchSpeed = 0;
+	maxTargets = 0;
 }
 
 void AGun::AddModifier(AGunPart* gunPart)
@@ -42,6 +45,10 @@ void AGun::AddModifier(AGunPart* gunPart)
 	L_ChargeTimeMod += gunPart->chargeTimeMod;
 	L_DamagePerCharge += gunPart->damagePerChargeMod;
 	L_VelocityModPerCharge += gunPart->velocityModPerChargeMod;
+	L_SearchSize += gunPart->searchSize;
+	L_SearchSpeed += gunPart->searchSpeed;
+	L_MaxTargets += gunPart->maxTargets;
+
 	setVariables();
 }
 
@@ -63,6 +70,10 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 	L_ChargeTimeMod -= gunPart->chargeTimeMod;
 	L_DamagePerCharge -= gunPart->damagePerChargeMod;
 	L_VelocityModPerCharge -= gunPart->velocityModPerChargeMod;
+	L_SearchSize -= gunPart->searchSize;
+	L_SearchSpeed -= gunPart->searchSpeed;
+	L_MaxTargets -= gunPart->maxTargets;
+
 	setVariables();
 }
 
@@ -84,5 +95,9 @@ void AGun::setVariables()
 	chargeTimeMod = S_ChargeTimeMod[std::max(0, std::min(L_ChargeTimeMod, 20))];
 	damagePerCharge = S_DamagePerCharge[std::max(0, std::min(L_DamagePerCharge, 20))];
 	velocityModPerCharge = S_VelocityModPerCharge[std::max(0, std::min(L_VelocityModPerCharge, 20))];
+	searchSize = S_SearchSize[std::max(0, std::min(L_SearchSize, 20))];
+	searchSpeed = S_SearchSpeed[std::max(0, std::min(L_SearchSpeed, 20))];
+	maxTargets = S_MaxTargets[std::max(0, std::min(L_MaxTargets, 20))];
+
 }
 

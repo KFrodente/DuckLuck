@@ -57,4 +57,10 @@ public:
 	int damagePerChargeMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int velocityModPerChargeMod = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int searchSize = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int searchSpeed = 0;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int maxTargets = 0;
 };

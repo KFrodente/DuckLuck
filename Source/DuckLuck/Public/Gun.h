@@ -61,6 +61,12 @@ public:
 	float damagePerCharge;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float velocityModPerCharge;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float searchSize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float searchSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int maxTargets;
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<int> S_CoatingSlotsAvailable;
@@ -94,40 +100,52 @@ public:
 	TArray<float> S_DamagePerCharge;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> S_VelocityModPerCharge;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> S_SearchSize;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> S_SearchSpeed;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<int> S_MaxTargets;
 
 public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_CoatingSlot = 11;
+	int L_CoatingSlot = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_CasingSlot = 11;
+	int L_CasingSlot = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ModifierSlot = 11;
+	int L_ModifierSlot = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_FireRate = 11;
+	int L_FireRate = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BulletDamage = 11;
+	int L_BulletDamage = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BulletVelocity = 11;
+	int L_BulletVelocity = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BurstAmount = 11;
+	int L_BurstAmount = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_TimeBetweenBursts = 11;
+	int L_TimeBetweenBursts = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_BulletsPerSpread = 11;
+	int L_BulletsPerSpread = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_SpreadAngle = 11;
+	int L_SpreadAngle = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_AdditionalBulletSize = 11;
+	int L_AdditionalBulletSize = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_MaxCharges = 11;
+	int L_MaxCharges = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ChargeTime = 11;
+	int L_ChargeTime = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_ChargeTimeMod = 11;
+	int L_ChargeTimeMod = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_DamagePerCharge = 11;
+	int L_DamagePerCharge = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
-	int L_VelocityModPerCharge = 11;
+	int L_VelocityModPerCharge = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_SearchSize = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_SearchSpeed = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_MaxTargets = 10;
 
 
 
