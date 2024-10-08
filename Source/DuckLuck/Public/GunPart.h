@@ -45,6 +45,10 @@ public:
 	int spreadAngleMod = 0;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int additionalBulletSizeMod = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int bulletsPerReloadMod = 0;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int reloadSpeedMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int maxChargesMod = 0;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)

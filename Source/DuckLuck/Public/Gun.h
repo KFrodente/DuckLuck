@@ -52,6 +52,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float additionalBulletSize;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int bulletsPerReload;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float reloadSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int maxCharges;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float chargeTime;
@@ -90,6 +94,10 @@ public:
 	TArray<float> S_SpreadAngle;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<float> S_AdditionalBulletSize;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<int> S_BulletsPerReload;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<float> S_ReloadSpeed;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<int> S_MaxCharges;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -130,6 +138,10 @@ public:
 	int L_SpreadAngle = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int L_AdditionalBulletSize = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_BulletsPerReload = 10;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int L_ReloadSpeed = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int L_MaxCharges = 10;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)

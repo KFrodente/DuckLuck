@@ -15,6 +15,8 @@ void AGun::ResetVariables()
 	timeBetweenBursts = 0;
 	bulletsPerSpread = 0;
 	spreadAngle = 0;
+	bulletsPerReload = 0;
+	reloadSpeed = 0;
 	maxCharges = 0;
 	chargeTime = 0;
 	chargeTimeMod = 0;
@@ -40,6 +42,8 @@ void AGun::AddModifier(AGunPart* gunPart)
 	L_BulletsPerSpread += gunPart->bulletsPerSpreadMod;
 	L_SpreadAngle += gunPart->spreadAngleMod;
 	L_AdditionalBulletSize += gunPart->additionalBulletSizeMod;
+	L_BulletsPerReload += gunPart->bulletsPerReloadMod;
+	L_ReloadSpeed += gunPart->reloadSpeedMod;
 	L_MaxCharges += gunPart->maxChargesMod;
 	L_ChargeTime += gunPart->chargeTime;
 	L_ChargeTimeMod += gunPart->chargeTimeMod;
@@ -65,6 +69,8 @@ void AGun::RemoveModifier(AGunPart* gunPart)
 	L_BulletsPerSpread -= gunPart->bulletsPerSpreadMod;
 	L_SpreadAngle -= gunPart->spreadAngleMod;
 	L_AdditionalBulletSize -= gunPart->additionalBulletSizeMod;
+	L_BulletsPerReload -= gunPart->bulletsPerReloadMod;
+	L_ReloadSpeed -= gunPart->reloadSpeedMod;
 	L_MaxCharges -= gunPart->maxChargesMod;
 	L_ChargeTime -= gunPart->chargeTime;
 	L_ChargeTimeMod -= gunPart->chargeTimeMod;
@@ -90,6 +96,8 @@ void AGun::setVariables()
 	bulletsPerSpread = S_BulletsPerSpread[std::max(0, std::min(L_BulletsPerSpread, 20))];
 	spreadAngle = S_SpreadAngle[std::max(0, std::min(L_SpreadAngle, 20))];
 	additionalBulletSize = S_AdditionalBulletSize[std::max(0, std::min(L_AdditionalBulletSize, 20))];
+	bulletsPerReload = S_BulletsPerReload[std::max(0, std::min(L_BulletsPerReload, 20))];
+	reloadSpeed = S_ReloadSpeed[std::max(0, std::min(L_ReloadSpeed, 20))];
 	maxCharges = S_MaxCharges[std::max(0, std::min(L_MaxCharges, 20))];
 	chargeTime = S_ChargeTime[std::max(0, std::min(L_ChargeTime, 20))];
 	chargeTimeMod = S_ChargeTimeMod[std::max(0, std::min(L_ChargeTimeMod, 20))];
