@@ -1,0 +1,14 @@
+{ "columns":4,
+ "image":"Spikes.png",
+ "imageheight":1200,
+ "imagewidth":1200,
+ "margin":0,
+ "name":"Spikes",
+ "spacing":0,
+ "tilecount":16,
+ "tiledversion":"1.11.0",
+ "tileheight":256,
+ "tilewidth":256,
+ "type":"tileset",
+ "version":"1.10"
+}

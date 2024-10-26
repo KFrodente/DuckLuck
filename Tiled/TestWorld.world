@@ -1,0 +1,20 @@
+{
+    "maps": [
+        {
+            "fileName": "T_BossP2TunnelBottom.json",
+            "height": 12800,
+            "width": 12288,
+            "x": 0,
+            "y": 0
+        },
+        {
+            "fileName": "T_BossP3Interlude.json",
+            "height": 25600,
+            "width": 25600,
+            "x": 12288,
+            "y": 0
+        }
+    ],
+    "onlyShowAdjacentMaps": false,
+    "type": "world"
+}
