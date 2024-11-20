@@ -22,6 +22,8 @@ public:
 	bool inUse;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int level;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FString PartName = "";
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int coatingSlotsChange = 0;
