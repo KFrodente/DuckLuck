@@ -31,7 +31,7 @@ void AGun::ResetVariables()
 void AGun::AddModifier(AGunPart* gunPart)
 {
 
-	L_CoatingSlot += gunPart->coatingSlotsChange;
+	L_CoatingSlot += std::max(gunPart->coatingSlotsChange, 20);
 	L_CasingSlot += gunPart->casingSlotsChange;
 	L_ModifierSlot += gunPart->modifierSlotsChange;
 	L_FireRate += gunPart->fireRateMod;
